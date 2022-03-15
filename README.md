@@ -1,4 +1,4 @@
-# Profil-Recrutation
+# Profil-Recruitment
 
 Recruitment task - Random User Generator API
 
