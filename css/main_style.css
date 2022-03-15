@@ -146,3 +146,6 @@ a {
   vertical-align: middle;
   cursor: pointer;
 }
+p.top-paragraph {
+  margin: 10px 0;
+}

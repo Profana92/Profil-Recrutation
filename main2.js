@@ -1,9 +1,18 @@
+let tableHeaders = document.querySelectorAll("th");
+console.log(tableHeaders);
+let i = 0;
+tableHeaders.forEach((th) => {
+  th.addEventListener("click", () => {
+    sortTable(th.cellIndex);
+  });
+});
+
 let tableBody = document.querySelector("tbody");
-let o = JSON.parse(localStorage.getItem("lastTenUsers"));
-console.log(o);
+let storageObject = JSON.parse(localStorage.getItem("lastTenUsers"));
+console.log(storageObject);
 
 function createTable() {
-  o.forEach((element) => {
+  storageObject.forEach((element) => {
     let date = new Date(element[7]);
     date = date.toLocaleDateString().split(".");
     date = date[2] + "." + date[1] + "." + date[0];
@@ -18,6 +27,7 @@ function createTable() {
     tableBody.appendChild(tableBodyRow);
   });
 }
+
 createTable();
 
 function sortTable(n) {

@@ -1,0 +1,151 @@
+/* CSS Reset - version 1.2.0 */
+:root {
+  --background-front-color: #e1efe6;
+  --background-back-color: #aeb7b3;
+  --text-color: #efcb68;
+  --generator-background-color: #160c28;
+}
+
+/* Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property */
+*:where(:not(input, iframe, canvas, img, svg, video):not(svg *)) {
+  all: unset;
+  display: revert;
+}
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+    Remove list styles (bullets/numbers)
+    in case you use it with normalize.css
+  */
+ol,
+ul {
+  list-style: none;
+}
+
+/* For images to not be able to exceed their container */
+img {
+  max-width: 100%;
+}
+
+/* Removes spacing between cells in tables */
+table {
+  border-collapse: collapse;
+}
+
+/* Revert the 'white-space' property for textarea elements on Safari */
+textarea {
+  white-space: revert;
+}
+
+/* Main CSS */
+
+/** Background settings **/
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: "Montserrat", sans-serif;
+  color: var(--text-color);
+}
+.background {
+  width: 100%;
+  position: fixed;
+  top: 0;
+}
+.background--front {
+  height: 50vh;
+  background-color: var(--background-front-color);
+  z-index: -1;
+}
+.background--back {
+  height: 100vh;
+  background-color: var(--background-back-color);
+  z-index: -2;
+}
+
+/** Generator styles **/
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.generator {
+  padding: 20px;
+  background-color: var(--generator-background-color);
+  border-radius: 10px;
+}
+
+.user__topwrap {
+  width: 300px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+p.user__firstname,
+p.user__lastname {
+  font-family: "Playfair Display", serif;
+  font-size: 1.6em;
+  letter-spacing: 2px;
+  color: var(--text-color);
+  padding: 0 5px;
+}
+button {
+  padding: 10px;
+  border: 1px solid white;
+  color: white;
+  border-radius: 10px;
+  margin: 10px 0;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.photo__wrap {
+  width: 150px;
+  height: 150px;
+  background-color: #e1efe6;
+  border-radius: 50%;
+  margin: 10px;
+  border: 2px solid blue;
+}
+svg {
+  margin: 0 10px 0 0;
+}
+
+.generator__footer {
+  margin: 10px 0;
+}
+
+hide-adress {
+  width: 10px;
+  height: 10px;
+  background-color: #aeb7b3;
+}
+img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+.hidden {
+  display: none;
+}
+a {
+  padding: 10px;
+  border: 1px solid white;
+  color: white;
+  border-radius: 10px;
+  margin: 20px 0;
+  vertical-align: middle;
+  cursor: pointer;
+}
+p.top-paragraph {
+  margin: 10px 0;
+}
