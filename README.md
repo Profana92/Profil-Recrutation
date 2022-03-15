@@ -13,7 +13,7 @@ which according to documentation limits the result of data requests.
 so it can fetch only name, nationality, registration date, picture, and current location. Instead of not fetching the location manipulation of the URL class constructor argument I decided to just not show the location by CSS display:none, as a much simpler solution. However, it can also be done with an additional function allowing to not fetch the location, as follows:
 <br>
 <code color="red">
-let url = new URL( urlManipulation(generatorHideAdressCheckbox.checked));
+let url = new URL( urlManipulation(generatorHideAdressCheckbox.checked));<br>
 function urlManipulation() {
 if (generatorHideAdressCheckbox.checked)
 return "https://randomuser.me/api/?inc=name,nat,registered,picture,location";
