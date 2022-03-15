@@ -11,16 +11,16 @@ function sortTable(n) {
     dir,
     switchcount = 0;
 
-  table = document.getElementById("userTable");
+  table = document.querySelector("#userTable");
   switching = true;
   dir = "asc";
   while (switching) {
     switching = false;
-    rows = table.getElementsByTagName("TR");
+    rows = table.querySelectorAll("tr");
     for (i = 1; i < rows.length - 1; i++) {
       shouldSwitch = false;
-      x = rows[i].getElementsByTagName("TD")[n];
-      y = rows[i + 1].getElementsByTagName("TD")[n];
+      x = rows[i].querySelectorAll("td")[n];
+      y = rows[i + 1].querySelectorAll("td")[n];
       let xContent = isNaN(x.innerHTML)
         ? x.innerHTML.toLowerCase() === "-"
           ? 0
