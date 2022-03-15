@@ -29,3 +29,6 @@ Even if it is a very simple solution I decided not to use it because I value add
 
 Application structure:
 <img src="https://wojciech-marczak.pl/schematic.jpg" width="828" height="673">
+
+Figma:
+<a href="https://www.figma.com/file/ZQwHnMF3F27ITIGwVmldi0/Untitled?node-id=0%3A1">Figma design</a>
