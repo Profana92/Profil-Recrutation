@@ -1,4 +1,4 @@
-/* CSS Reset - version 1.2.0 */
+/*** CSS Reset - version 1.2.0 ***/
 :root {
   --background-front-color: #e1efe6;
   --background-back-color: #aeb7b3;
@@ -6,53 +6,43 @@
   --generator-background-color: #160c28;
 }
 
-/* Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property */
 *:where(:not(input, iframe, canvas, img, svg, video):not(svg *)) {
   all: unset;
   display: revert;
 }
 
-/* Preferred box-sizing value */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-/*
-    Remove list styles (bullets/numbers)
-    in case you use it with normalize.css
-  */
 ol,
 ul {
   list-style: none;
 }
 
-/* For images to not be able to exceed their container */
 img {
   max-width: 100%;
 }
 
-/* Removes spacing between cells in tables */
 table {
   border-collapse: collapse;
 }
 
-/* Revert the 'white-space' property for textarea elements on Safari */
 textarea {
   white-space: revert;
 }
 
-/* Main CSS */
+/*** Main CSS ***/
 
 /** Background settings **/
 body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
   font-family: "Montserrat", sans-serif;
-  color: var(--text-color);
 }
 .background {
   width: 100%;
@@ -71,81 +61,155 @@ body {
 }
 
 /** Generator styles **/
-.flex {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  flex-wrap: wrap;
+table {
+  min-width: 75vw;
 }
-.generator {
-  padding: 20px;
-  background-color: var(--generator-background-color);
-  border-radius: 10px;
-}
-
-.user__topwrap {
-  width: 300px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-p.user__firstname,
-p.user__lastname {
-  font-family: "Playfair Display", serif;
-  font-size: 1.6em;
-  letter-spacing: 2px;
-  color: var(--text-color);
-  padding: 0 5px;
-}
-button {
-  padding: 10px;
-  border: 1px solid white;
-  color: white;
-  border-radius: 10px;
-  margin: 10px 0;
-  vertical-align: middle;
+th {
+  text-align: center;
   cursor: pointer;
+  background-color: rgb(202, 202, 202);
 }
-.photo__wrap {
-  width: 150px;
-  height: 150px;
-  background-color: #e1efe6;
-  border-radius: 50%;
-  margin: 10px;
-  border: 2px solid blue;
+tr {
+  text-align: center;
 }
-svg {
-  margin: 0 10px 0 0;
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+tr:nth-child(odd) {
+  background-color: #e2e2e2;
+}
+tr:hover {
+  background-color: #ddd;
+}
+td,
+th {
+  border: 1px solid #ddd;
+  padding: 8px;
 }
 
-.generator__footer {
-  margin: 10px 0;
+@media only screen and (max-width: 600px) {
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+    width: 95vw;
+  }
+
+  table {
+    margin: 20px 0;
+  }
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  tr {
+    border: 1px solid #ccc;
+  }
+
+  td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+  }
+
+  td:before {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+  }
+
+  td:nth-of-type(1):before {
+    content: "First Name";
+  }
+  td:nth-of-type(2):before {
+    content: "Last Name";
+  }
+  td:nth-of-type(3):before {
+    content: "Country";
+  }
+  td:nth-of-type(4):before {
+    content: "Registration Date";
+  }
+  thead::before {
+    content: "Sort by:";
+    position: absolute;
+    top: 10px;
+    transform: translateX(-50%);
+    left: 50%;
+    z-index: 500;
+    height: 25px;
+  }
+  thead tr {
+    position: absolute;
+    height: 150px;
+    top: 40px;
+    left: 0px;
+    margin: auto;
+    width: 100%;
+  }
+  th {
+    width: 100%;
+  }
+  tbody {
+    margin-top: 190px;
+  }
 }
 
-hide-adress {
-  width: 10px;
-  height: 10px;
-  background-color: #aeb7b3;
-}
-img {
-  height: 100%;
-  width: 100%;
-  border-radius: 50%;
-}
-.hidden {
-  display: none;
-}
-a {
-  padding: 10px;
-  border: 1px solid white;
-  color: white;
-  border-radius: 10px;
-  margin: 20px 0;
-  vertical-align: middle;
-  cursor: pointer;
-}
-p.top-paragraph {
-  margin: 10px 0;
+@media only screen and (max-width: 300px) {
+  table,
+  thead,
+  tbody,
+  td,
+  tr {
+    display: block;
+    width: 95vw;
+  }
+  thead tr {
+    position: absolute;
+    height: 150px;
+    top: 40px;
+    left: 0px;
+    margin: auto;
+    width: 100%;
+  }
+  td:nth-of-type(1):before {
+    content: "";
+  }
+  td:nth-of-type(2):before {
+    content: "";
+  }
+  td:nth-of-type(3):before {
+    content: "";
+  }
+  td:nth-of-type(4):before {
+    content: "";
+  }
+
+  th {
+    width: 100%;
+  }
+  td {
+    padding-left: 0%;
+  }
+  tbody {
+    margin-top: 190px;
+  }
+  thead::before {
+    content: "Sort by:";
+    position: absolute;
+    top: 10px;
+    transform: translateX(-50%);
+    left: 50%;
+    z-index: 500;
+    height: 25px;
+  }
 }
