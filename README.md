@@ -10,7 +10,7 @@ The main task of this app is to fetch data and use it to create random users and
 
 Data fetch is done by URL class and constructor new URL, to let the possible manipulation of URL possible if needed later in the development cycle. Task stated that only data needed should be fetched, and as I understood the author it applies for not fetching the whole data from API, but just a restricted part, so URL contains: ?inc=name,nat,registered,picture,location
 which according to documentation limits the result of data requests.
-so it can fetch only name, nationality, registration date, picture, and current location. Instead of not fetching the location manipulation of the URL class constructor argument I decided to just not show the location by CSS display:none, as a much simpler solution. However, it can also be done with an additional function allowing to not fetch the location, as follows:
+so it can fetch only name, nationality, registration date, picture, and current location. Instead of not fetching the location manipulation of the URL class constructor argument I decided to just not show the location by CSS display:none, as a much simpler solution. However, it can also be done with an additional function allowing to not fetch the location, as follows:<br>
 <code color="red">
 let url = new URL( urlManipulation(generatorHideAdressCheckbox.checked));
 function urlManipulation() {
