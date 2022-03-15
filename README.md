@@ -13,12 +13,11 @@ which according to documentation limits the result of data requests.
 so it can fetch only name, nationality, registration date, picture, and current location. Instead of not fetching the location manipulation of the URL class constructor argument I decided to just not show the location by CSS display:none, as a much simpler solution. However, it can also be done with an additional function allowing to not fetch the location, as follows:
 <br>
 <code color="red">
-let url = new URL( urlManipulation(generatorHideAdressCheckbox.checked));<br>
-function urlManipulation() {
-if (generatorHideAdressCheckbox.checked)
-return "https://randomuser.me/api/?inc=name,nat,registered,picture,location";
-else return "https://randomuser.me/api/?inc=name,nat,registered,picture";
-}
+let url = new URL( urlManipulation(generatorHideAdressCheckbox.checked));  
+function urlManipulation() {  
+if (generatorHideAdressCheckbox.checked) return "https://randomuser.me/api/?inc=name,nat,registered,picture,location";  
+else return "https://randomuser.me/api/?inc=name,nat,registered,picture";  
+}  
 </code>
 <br>
 This would ensure that only data needed will be fetched. However, there would still exist a problem of error while updateGeneratorData function would want to place location.country into the element (and localSession) as it would be undefined (because did not get fetched). This problem should be solved with the ?. operator in the easier scenario or a function that would replace undefined with "no data" string. That is the most simple solution I can think of at the moment.
