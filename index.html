@@ -5,14 +5,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="main.js" defer></script>
-    <link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
-    <title>Profil-Software Recturation</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/main.js" defer></script>
+    <link rel="shortcut icon" href="resources/images/favicon.svg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <title>Profil-Software Recrutation</title>
 </head>
 
 <body>
-
+    <div class="background background--front"></div>
+    <div class="background background--back"></div>
+    <div class="generator flex">
+        <button><svg width="16" height="16" viewBox="2 2 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                    d="M4 9.5a.5.5 0 00-.5.5 6.5 6.5 0 0012.13 3.25.5.5 0 00-.866-.5A5.5 5.5 0 014.5 10a.5.5 0 00-.5-.5z"
+                    clip-rule="evenodd" />
+                <path fill-rule="evenodd"
+                    d="M4.354 9.146a.5.5 0 00-.708 0l-2 2a.5.5 0 00.708.708L4 10.207l1.646 1.647a.5.5 0 00.708-.708l-2-2zM15.947 10.5a.5.5 0 00.5-.5 6.5 6.5 0 00-12.13-3.25.5.5 0 10.866.5A5.5 5.5 0 0115.448 10a.5.5 0 00.5.5z"
+                    clip-rule="evenodd" />
+                <path fill-rule="evenodd"
+                    d="M18.354 8.146a.5.5 0 00-.708 0L16 9.793l-1.646-1.647a.5.5 0 00-.708.708l2 2a.5.5 0 00.708 0l2-2a.5.5 0 000-.708z"
+                    clip-rule="evenodd" />
+            </svg>Generate new user</button>
+        <div class="generator__footer">
+            <input type="checkbox" name="" id="hideadress__checkbox" checked="checked">
+            <label for="hide-adress"> Hide adress </label>
+        </div>
+        <div class="wrap flex hidden">
+            <div class="user__topwrap">
+                <p class="user__firstname">First Name</p>
+                <p class=" user__lastname">Last Name</p>
+            </div>
+            <div class="photo__wrap">
+                <img class="photo--resize " src="" alt="" srcset="">
+            </div>
+            <div class="user__bottomwrap flex">
+                <p class="user__registerdate">Registration date still loading...</p>
+                <p class="user__nationality">Nationality still loading...</p>
+                <p class="user__location">Location still loading...</p>
+            </div>
+            <a href="topten.html" class="hidden">Top 10</a>
+        </div>
+    </div>
 </body>
 
 </html>
