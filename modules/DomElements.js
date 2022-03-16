@@ -21,3 +21,18 @@ let generatorMainWrap = document.querySelector(".wrap");
 let generatorHideAdressCheckbox = document.querySelector(
   "#hideadress__checkbox"
 );
+
+/* Test*/
+if (
+  generatorButton == undefined ||
+  generatorUserFirstName == undefined ||
+  generatorUserLastName == undefined ||
+  generatorImage == undefined ||
+  generatorUserRegisterDate == undefined ||
+  generatorUserNationality == undefined ||
+  generatorUserLocalization == undefined ||
+  generatorMainWrap == undefined ||
+  generatorHideAdressCheckbox == undefined
+) {
+  throw " Error ⛔⛔⛔ DOM Elements selection error, please ensure correct elements assignment";
+}

@@ -19,3 +19,8 @@ function lastTenUsersDatabase(response) {
   ]);
   localStorage.setItem("lastTenUsers", JSON.stringify(lastTenUsers));
 }
+
+/* Tests */
+if (generatorLink == undefined) {
+  throw " Error ⛔⛔⛔ DOM Element selection error in lastTenUsersDatabase.js";
+}

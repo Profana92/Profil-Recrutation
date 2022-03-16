@@ -29,3 +29,16 @@ function showOrHideGeneratorData() {
   if (generatorMainWrap.classList.contains("hidden"))
     generatorMainWrap.classList.toggle("hidden");
 }
+
+/* Tests */
+if (
+  generatorUserFirstName == undefined ||
+  generatorUserLastName == undefined ||
+  generatorImage == undefined ||
+  generatorUserRegisterDate == undefined ||
+  generatorUserNationality == undefined ||
+  generatorUserLocalization == undefined ||
+  generatorMainWrap == undefined
+) {
+  throw " Error ⛔⛔⛔ DOM Elements selection error in updateGeneratorData.js, please ensure correct elements assignment";
+}

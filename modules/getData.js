@@ -18,4 +18,21 @@ async function getData() {
   const response = await res.json();
   lastTenUsersDatabase(response);
   updateGeneratorData(response);
+  return response;
+}
+
+/* Test*/
+if (
+  generatorUserLocalization == undefined ||
+  generatorHideAdressCheckbox == undefined
+) {
+  throw " Error ⛔⛔⛔ DOM Elements import error, please ensure correct elements assignment";
+}
+
+if (lastTenUsersDatabase == undefined || updateGeneratorData == undefined) {
+  throw " Error ⛔⛔⛔ function import error in getData.js";
+}
+
+if (getData() == undefined) {
+  throw " Error ⛔⛔⛔ something went wrong while data fetch process, response is undefined";
 }
