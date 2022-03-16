@@ -6,7 +6,7 @@ import {
   generatorUserNationality,
   generatorUserLocalization,
   generatorMainWrap,
-} from "../DomElements.js";
+} from "../domElements.js";
 
 export { updateGeneratorData };
 

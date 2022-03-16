@@ -32,7 +32,3 @@ if (
 if (lastTenUsersDatabase == undefined || updateGeneratorData == undefined) {
   throw " Error ⛔⛔⛔ function import error in getData.js";
 }
-
-if (getData() == undefined) {
-  throw " Error ⛔⛔⛔ something went wrong while data fetch process, response is undefined";
-}
