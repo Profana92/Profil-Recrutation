@@ -1,4 +1,4 @@
-/* CSS Reset - version 1.2.0 */
+/*** CSS Reset - version 1.2.0 ***/
 :root {
   --background-front-color: #e1efe6;
   --background-back-color: #aeb7b3;
@@ -12,38 +12,30 @@
   display: revert;
 }
 
-/* Preferred box-sizing value */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-/*
-    Remove list styles (bullets/numbers)
-    in case you use it with normalize.css
-  */
 ol,
 ul {
   list-style: none;
 }
 
-/* For images to not be able to exceed their container */
 img {
   max-width: 100%;
 }
 
-/* Removes spacing between cells in tables */
 table {
   border-collapse: collapse;
 }
 
-/* Revert the 'white-space' property for textarea elements on Safari */
 textarea {
   white-space: revert;
 }
 
-/* Main CSS */
+/*** Main CSS ***/
 
 /** Background settings **/
 body {
@@ -148,4 +140,22 @@ a {
 }
 p.top-paragraph {
   margin: 10px 0;
+}
+
+@media only screen and (max-width: 350px) {
+  body {
+    position: relative;
+  }
+  .generator {
+    position: absolute;
+    top: 5vh;
+    min-height: 90vh;
+    max-width: 95%;
+  }
+  .user__topwrap {
+    width: 95%;
+  }
+  p.top-paragraph {
+    text-align: center;
+  }
 }

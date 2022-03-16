@@ -1,0 +1,20 @@
+{
+  "name": "profil-recrutation",
+  "version": "1.0.0",
+  "description": "Recruitment task - Random User Generator API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Profana92/Profil-Recrutation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Profana92/Profil-Recrutation/issues"
+  },
+  "homepage": "https://github.com/Profana92/Profil-Recrutation#readme"
+}
