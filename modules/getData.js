@@ -15,6 +15,9 @@ async function getData() {
     generatorUserLocalization.classList.add("hidden");
   else generatorUserLocalization.classList.remove("hidden");
   const res = await fetch(url);
+  if (!res.ok) {
+    throw ` Error ⛔⛔⛔ Data fetch cannot be completed. Status: ${res.status} ${res.statusText}`;
+  }
   const response = await res.json();
   lastTenUsersDatabase(response);
   updateGeneratorData(response);
