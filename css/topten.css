@@ -153,8 +153,8 @@ th {
     height: 150px;
     top: 40px;
     left: 0px;
-    margin: auto;
-    width: 100%;
+    width: 95%;
+    margin-left: 2.5%;
   }
   th {
     width: 100%;
@@ -179,7 +179,8 @@ th {
     top: 40px;
     left: 0px;
     margin: auto;
-    width: 100%;
+    width: 95%;
+    margin-left: 2.5%;
   }
   td:nth-of-type(1):before {
     content: "";
