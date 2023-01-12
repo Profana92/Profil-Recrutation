@@ -1,10 +1,10 @@
-# Profil-Recruitment
+# Random User Generator API
 
-Recruitment task - Random User Generator API
+Random User Generator API
 
 Live version available - <a href="https://wojciech-marczak.pl/">here</a> - Remember to generate at least 10 users!!
 
-This project is a Profil-software Recruitment task. All of the tasks were completed, with several additions from my side.
+All of the tasks were completed, with several additions from my side.
 
 The application got separated into modules imported by index.js and lastTen.js files, which both control the behavior of different pages.
 
